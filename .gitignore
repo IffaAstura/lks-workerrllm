@@ -1,0 +1,51 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# Serverless
+/.serverless
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+.env
+
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+*.code-workspace
+
+# Ignore node_modules in the layers directory
+/serverless/src/layers/node_modules
+
+# Ignore package-lock.json in the layers directory
+/serverless/src/layers/package-lock.json
+
+# Ignore all zip files in the layers directory
+/serverless/src/layers/*.zip
