@@ -29,11 +29,11 @@ export async function POST(request: NextRequest) {
       const body = await request.json();
       const validatedData = signUpSchema.parse(body);
       const { fullName, email, password } = validatedData;
-      const secretHash = CryptoJS.HmacSHA256(email + process.env.NEXT_PUBLIC_COGNITO_CLIENT_ID, process.env.NEXT_PUBLIC_COGNITO_CLIENT_SECRET).toString(CryptoJS.enc.Base64)
+      // const secretHash = CryptoJS.HmacSHA256(email + process.env.NEXT_PUBLIC_COGNITO_CLIENT_ID, process.env.NEXT_PUBLIC_COGNITO_CLIENT_SECRET).toString(CryptoJS.enc.Base64)
 
       const command = new SignUpCommand({
          ClientId: process.env.NEXT_PUBLIC_COGNITO_CLIENT_ID,
-         SecretHash: secretHash,
+         // SecretHash: secretHash,
          Username: email,
          Password: password,
          UserAttributes: [
